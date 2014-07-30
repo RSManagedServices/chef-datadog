@@ -21,10 +21,10 @@
 # The Datadog api key to associate your agent's data with your organization.
 # Can be found here:
 # https://app.datadoghq.com/account/settings
-default['datadog']['api_key'] = nil
+default['datadog']['api_key'] = ""
 
 # Create an application key on the Account Settings page
-default['datadog']['application_key'] = nil
+default['datadog']['application_key'] = ""
 
 # Don't change these
 # The host of the Datadog intake server to send agent data to
@@ -34,10 +34,10 @@ default['datadog']['url'] = "https://app.datadoghq.com"
 default['datadog']['tags'] = ""
 
 # Autorestart agent
-default['datadog']['autorestart'] = false
+default['datadog']['autorestart'] = "false"
 
 # Repository configuration
-default['datadog']['installrepo'] = true
+default['datadog']['installrepo'] = "true"
 default['datadog']['aptrepo'] = "http://apt.datadoghq.com"
 default['datadog']['yumrepo'] = "http://yum.datadoghq.com/rpm/"
 
@@ -57,14 +57,14 @@ rescue ArgumentError
 end
 
 # Chef handler version
-default['datadog']['chef_handler_version'] = nil
+default['datadog']['chef_handler_version'] = ""
 
 # Enable the Chef handler to report to datadog
-default['datadog']['chef_handler_enable'] = true
+default['datadog']['chef_handler_enable'] = "true"
 
 # Boolean to enable debug_mode, which outputs massive amounts of log messages
 # to the /tmp/ directory.
-default['datadog']['debug'] = false
+default['datadog']['debug'] = "false"
 
 # Default to false to non_local_traffic
 # See: https://github.com/DataDog/dd-agent/wiki/Network-Traffic-and-Proxy-Configuration
@@ -72,7 +72,7 @@ default['datadog']['non_local_traffic'] = false
 
 # How often you want the agent to collect data, in seconds. Any value between
 # 15 and 60 is a reasonable interval.
-default['datadog']['check_freq'] = 15
+default['datadog']['check_freq'] = "15"
 
 # Specify agent hostname
 # More information available here: http://docs.datadoghq.com/hostnames/#agent
@@ -80,30 +80,30 @@ default['datadog']['hostname'] = node.name
 
 # If running on ec2, if true, use the instance-id as the host identifier
 # rather than the hostname for the agent or nodename for chef-handler.
-default['datadog']['use_ec2_instance_id'] = false
+default['datadog']['use_ec2_instance_id'] = "false"
 
 # Use mount points instead of volumes to track disk and fs metrics
-default['datadog']['use_mount'] = false
+default['datadog']['use_mount'] = "false"
 
 # Change port the agent is listening to
-default['datadog']['agent_port'] = 17123
+default['datadog']['agent_port'] = "17123"
 
 # Start agent or not
-default['datadog']['agent_start'] = true
+default['datadog']['agent_start'] = "true"
 
 # Start a graphite listener on this port
 # https://github.com/DataDog/dd-agent/wiki/Feeding-Datadog-with-Graphite
-default['datadog']['graphite'] = false
-default['datadog']['graphite_port'] = 17124
+default['datadog']['graphite'] = "false"
+default['datadog']['graphite_port'] = "17124"
 
 # log-parsing configuration
 default['datadog']['dogstreams'] = []
 
 # Logging configuration
-default['datadog']['syslog']['active'] = false
-default['datadog']['syslog']['udp'] = false
-default['datadog']['syslog']['host'] = nil
-default['datadog']['syslog']['port'] = nil
+default['datadog']['syslog']['active'] = "false"
+default['datadog']['syslog']['udp'] = "false"
+default['datadog']['syslog']['host'] = "nil"
+default['datadog']['syslog']['port'] = "nil"
 
 # Web proxy configuration
 default['datadog']['web_proxy']['host'] = nil
