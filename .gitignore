@@ -28,7 +28,7 @@ Gemfile*.lock
 
 # Berkshelf
 Berksfile.lock
-cookbooks/
+#cookbooks/
 /.ruby-version
 .kitchen/
 .kitchen.local.yml
